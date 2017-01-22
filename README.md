@@ -1,24 +1,7 @@
-# README
+Master Many-to-Many Associations with ActiveRecord
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+By Fred Heath  January 02, 2017
 
-Things you may want to cover:
+https://www.sitepoint.com/master-many-to-many-associations-with-activerecord/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This repository content all example codes on post of Fred Heath
