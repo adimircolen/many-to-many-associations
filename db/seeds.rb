@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+bart = Student.create name: 'Bart Simpson'
+edna = Tutor.create name: 'Mrs Krabapple'
+Klass.create subject: 'Maths', student: bart, tutor: edna
+
+
+# find all Bart's tutors
+Student.find_by(name: 'Bart Simpson').tutors
+
+# get all students who attend the Maths class
+Student.joins(:klasses).where(klasses: {subject: 'Maths'}).distinct.pluck(:name)
+
+# get all students who attend Maths taught by Mrs Krabapple
+Student.joins(:tutors).joins(:klasses).where(klasses: {subject: 'Maths'}, tutors: {name: 'Mrs Krabapple'}).distinct.map {|x| puts x.name}
